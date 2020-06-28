@@ -8,7 +8,7 @@
         <param name="buildSettings" value="PREFER_VCS" />
         <param name="credentialsStorageType" value="credentialsJSON" />
         <param name="enabled" value="true" />
-        <param name="rootId" value="Sandbox_SandboxPr" />
+        <param name="rootId" value="Sandbox_Sandbox" />
         <param name="showChanges" value="false" />
       </parameters>
     </extension>
