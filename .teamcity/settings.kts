@@ -88,7 +88,7 @@ object Database : BuildType({
     name = "database"
 
     vcs {
-        root(Sandbox1, "+:database/platform-db=>platform-db")
+        root(Sandbox1, "+:database/platform-db=>.")
     }
 
     steps {
