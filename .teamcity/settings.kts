@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.commitStatusPublisher
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.gradle
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
@@ -92,10 +93,8 @@ object Database : BuildType({
     }
 
     steps {
-        gradle {
-            tasks = "clean build"
-            buildFile = ""
-            gradleWrapperPath = ""
+        script {
+            scriptContent = "ls -l"
         }
     }
 })
