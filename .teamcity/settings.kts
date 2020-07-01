@@ -35,6 +35,7 @@ project {
     buildType(Analytics)
     buildType(Build)
     buildType(Pr)
+    buildType(Database)
 }
 
 object Analytics : BuildType({
@@ -80,6 +81,10 @@ object Build : BuildType({
             branchFilter = ""
         }
     }
+})
+
+object Database : BuildType({
+    name = "database"
 })
 
 object Pr : BuildType({
