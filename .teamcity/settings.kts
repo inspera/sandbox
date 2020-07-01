@@ -85,6 +85,10 @@ object Build : BuildType({
 
 object Database : BuildType({
     name = "database"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
 })
 
 object Pr : BuildType({
