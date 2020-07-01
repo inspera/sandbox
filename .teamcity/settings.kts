@@ -129,7 +129,7 @@ object Pr : BuildType({
 })
 
 object Sandbox1 : GitVcsRoot({
-    name = "sandbox (1)"
+    name = "sandbox_database"
     url = "git@github.com:inspera/sandbox.git"
     authMethod = uploadedKey {
         uploadedKey = "hugin_rsa"
