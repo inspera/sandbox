@@ -90,6 +90,14 @@ object Database : BuildType({
     vcs {
         root(Sandbox1)
     }
+
+    steps {
+        gradle {
+            tasks = "clean build"
+            buildFile = ""
+            gradleWrapperPath = ""
+        }
+    }
 })
 
 object Pr : BuildType({
