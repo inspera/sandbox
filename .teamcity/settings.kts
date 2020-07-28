@@ -1,7 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.commitStatusPublisher
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.gradle
-import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
@@ -37,7 +36,6 @@ project {
     buildType(Analytics)
     buildType(Build)
     buildType(Pr)
-    buildType(Database)
 }
 
 object Analytics : BuildType({
@@ -81,20 +79,6 @@ object Build : BuildType({
     triggers {
         vcs {
             branchFilter = ""
-        }
-    }
-})
-
-object Database : BuildType({
-    name = "database"
-
-    vcs {
-        root(Sandbox1, "+:database/platform-db=>.")
-    }
-
-    steps {
-        script {
-            scriptContent = "ls -l"
         }
     }
 })
