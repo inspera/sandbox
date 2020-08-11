@@ -31,7 +31,6 @@ version = "2020.1"
 project {
 
     vcsRoot(SandboxPr)
-    vcsRoot(Sandbox1)
 
     buildType(Analytics)
     buildType(Build)
@@ -116,14 +115,6 @@ object Pr : BuildType({
                 }
             }
         }
-    }
-})
-
-object Sandbox1 : GitVcsRoot({
-    name = "sandbox_database"
-    url = "git@github.com:inspera/sandbox.git"
-    authMethod = uploadedKey {
-        uploadedKey = "hugin_rsa"
     }
 })
 
