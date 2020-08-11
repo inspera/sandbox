@@ -85,6 +85,10 @@ object Build : BuildType({
 
 object Dataflow : BuildType({
     name = "dataflow"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
 })
 
 object Pr : BuildType({
