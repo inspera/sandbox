@@ -32,6 +32,7 @@ version = "2020.1"
 project {
 
     vcsRoot(SandboxPr)
+    vcsRoot(Sandbox1)
 
     buildType(Analytics)
     buildType(Build)
@@ -88,7 +89,7 @@ object Dataflow : BuildType({
     name = "dataflow"
 
     vcs {
-        root(DslContext.settingsRoot)
+        root(Sandbox1)
     }
 
     steps {
@@ -141,6 +142,15 @@ object Pr : BuildType({
                 }
             }
         }
+    }
+})
+
+object Sandbox1 : GitVcsRoot({
+    name = "sandbox (1)"
+    url = "git@github.com:inspera/sandbox.git"
+    branchSpec = "+:refs/heads/*"
+    authMethod = uploadedKey {
+        uploadedKey = "hugin_rsa"
     }
 })
 
