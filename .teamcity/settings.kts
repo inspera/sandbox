@@ -100,6 +100,14 @@ object Dataflow : BuildType({
             """.trimIndent()
         }
     }
+
+    triggers {
+        vcs {
+            perCheckinTriggering = true
+            groupCheckinsByCommitter = true
+            enableQueueOptimization = false
+        }
+    }
 })
 
 object Pr : BuildType({
