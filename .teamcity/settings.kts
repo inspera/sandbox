@@ -106,6 +106,8 @@ object Dataflow : BuildType({
     triggers {
         vcs {
             branchFilter = ""
+            perCheckinTriggering = true
+            groupCheckinsByCommitter = true
             enableQueueOptimization = false
         }
     }
