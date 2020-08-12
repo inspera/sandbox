@@ -102,6 +102,7 @@ object Dataflow : BuildType({
 
     triggers {
         vcs {
+            triggerRules = "+:*"
             branchFilter = ""
         }
     }
