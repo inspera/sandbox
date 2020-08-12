@@ -97,7 +97,8 @@ object Dataflow : BuildType({
             scriptContent = """
                 tag=`echo %vcsroot.branch% | sed "s/\//_/"`
                 echo "vcsroot.branch is ${'$'}tag"
-                tag=`echo %%teamcity.build.branch% | sed "s/\//_/"`
+                tag=`echo %teamcity.build.branch% | sed "s/\//_/"`
+                echo "teamcity.build.branch is ${'$'}tag"
             """.trimIndent()
         }
     }
