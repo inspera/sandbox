@@ -99,6 +99,12 @@ object Dataflow : BuildType({
             """.trimIndent()
         }
     }
+
+    triggers {
+        vcs {
+            branchFilter = ""
+        }
+    }
 })
 
 object Pr : BuildType({
